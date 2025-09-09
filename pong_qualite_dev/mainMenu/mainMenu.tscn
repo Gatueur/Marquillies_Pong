@@ -1,6 +1,26 @@
-[gd_scene format=3 uid="uid://bcmn63y5sj3s6"]
+[gd_scene load_steps=2 format=3 uid="uid://bcmn63y5sj3s6"]
 
-[node name="mainMenu" type="MarginContainer"]
+[ext_resource type="FontFile" uid="uid://chqbws2sevdlh" path="res://assets/mainMenu/PixelGamer-Regular.otf" id="1_kpht7"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 120.0
+offset_top = 80.0
+offset_right = 1032.0
+offset_bottom = 568.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="mainMenu" type="MarginContainer" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -11,40 +31,47 @@ theme_override_constants/margin_top = 80
 theme_override_constants/margin_right = 120
 theme_override_constants/margin_bottom = 80
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="mainMenu"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="mainMenu/HBoxContainer"]
 layout_mode = 2
 
-[node name="Title" type="Label" parent="HBoxContainer/VBoxContainer"]
+[node name="Title" type="Label" parent="mainMenu/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Pong"
 
-[node name="MenuOptions" type="VBoxContainer" parent="HBoxContainer/VBoxContainer"]
+[node name="MenuOptions" type="VBoxContainer" parent="mainMenu/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
 theme_override_constants/separation = 30
 
-[node name="Play" type="Label" parent="HBoxContainer/VBoxContainer/MenuOptions"]
+[node name="Play" type="Label" parent="mainMenu/HBoxContainer/VBoxContainer/MenuOptions"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_kpht7")
+theme_override_font_sizes/font_size = 50
 text = "Jouer"
 
-[node name="Leaderboard" type="Label" parent="HBoxContainer/VBoxContainer/MenuOptions"]
+[node name="Leaderboard" type="Label" parent="mainMenu/HBoxContainer/VBoxContainer/MenuOptions"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_kpht7")
+theme_override_font_sizes/font_size = 24
 text = "Tableau des scores"
 
-[node name="Leave" type="Label" parent="HBoxContainer/VBoxContainer/MenuOptions"]
+[node name="Leave" type="Label" parent="mainMenu/HBoxContainer/VBoxContainer/MenuOptions"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_kpht7")
+theme_override_font_sizes/font_size = 24
 text = "Quitter"
 
-[node name="Credits" type="Label" parent="HBoxContainer/VBoxContainer"]
+[node name="Credits" type="Label" parent="mainMenu/HBoxContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_kpht7")
 text = "Credits"
 
-[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="mainMenu/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Illustration" type="TextureRect" parent="HBoxContainer/CenterContainer"]
+[node name="Illustration" type="TextureRect" parent="mainMenu/HBoxContainer/CenterContainer"]
 layout_mode = 2
