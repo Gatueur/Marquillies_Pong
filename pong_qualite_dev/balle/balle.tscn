@@ -19,7 +19,7 @@ gravity_scale = 0.0
 linear_damp_mode = 1
 angular_damp_mode = 1
 script = ExtResource("1_50dfo")
-Speed = 1500.0
+Speed = 600.0
 
 [node name="BalleSprite" type="Sprite2D" parent="BalleRigidBody"]
 scale = Vector2(0.5, 0.5)
