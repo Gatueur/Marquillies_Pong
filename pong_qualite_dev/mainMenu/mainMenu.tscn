@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://bcmn63y5sj3s6"]
+[gd_scene load_steps=8 format=3 uid="uid://bcmn63y5sj3s6"]
 
 [ext_resource type="FontFile" uid="uid://chqbws2sevdlh" path="res://assets/mainMenu/PixelGamer-Regular.otf" id="1_kpht7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kpht7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6ay73"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b4frg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yobga"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0o04g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1dglg"]
 
 [node name="MarginContainer" type="MarginContainer"]
 anchors_preset = 15
@@ -35,35 +47,56 @@ layout_mode = 2
 size_flags_vertical = 6
 theme_override_constants/separation = 30
 
-[node name="Button" type="Button" parent="mainMenu/HBoxContainer/VBoxContainer/MenuOptions"]
+[node name="Play" type="Button" parent="mainMenu/HBoxContainer/VBoxContainer/MenuOptions"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_kpht7")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kpht7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_6ay73")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_b4frg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yobga")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_0o04g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1dglg")
 text = "Jouer"
 alignment = 0
 
-[node name="Play" type="Label" parent="mainMenu/HBoxContainer/VBoxContainer/MenuOptions"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_kpht7")
-theme_override_font_sizes/font_size = 50
-text = "Jouer"
-
-[node name="Leaderboard" type="Label" parent="mainMenu/HBoxContainer/VBoxContainer/MenuOptions"]
+[node name="Leaderboard" type="Button" parent="mainMenu/HBoxContainer/VBoxContainer/MenuOptions"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_kpht7")
 theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kpht7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_6ay73")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_b4frg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yobga")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_0o04g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1dglg")
 text = "Tableau des scores"
+alignment = 0
 
-[node name="Leave" type="Label" parent="mainMenu/HBoxContainer/VBoxContainer/MenuOptions"]
+[node name="Leave" type="Button" parent="mainMenu/HBoxContainer/VBoxContainer/MenuOptions"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_kpht7")
 theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kpht7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_6ay73")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_b4frg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yobga")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_0o04g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1dglg")
 text = "Quitter"
+alignment = 0
 
-[node name="Credits" type="Label" parent="mainMenu/HBoxContainer/VBoxContainer"]
+[node name="Leave2" type="Button" parent="mainMenu/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_kpht7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kpht7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_6ay73")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_b4frg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yobga")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_0o04g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1dglg")
 text = "Credits"
+alignment = 0
 
 [node name="CenterContainer" type="CenterContainer" parent="mainMenu/HBoxContainer"]
 layout_mode = 2
