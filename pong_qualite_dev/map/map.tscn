@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=4 uid="uid://cif2dfk3c00bl"]
+[gd_scene load_steps=9 format=4 uid="uid://cif2dfk3c00bl"]
 
 [ext_resource type="Texture2D" uid="uid://b8c3r8levm07a" path="res://assets/map/map_background.png" id="1_a0dt8"]
 [ext_resource type="Texture2D" uid="uid://ded7em5rtf1br" path="res://assets/map/map_white_band.png" id="2_4hjbm"]
+[ext_resource type="PackedScene" uid="uid://dy4a18ynh8smu" path="res://balle/balle.tscn" id="3_4hjbm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lgq1i"]
 texture = ExtResource("1_a0dt8")
@@ -54,3 +55,7 @@ position = Vector2(0, -168)
 [node name="MurLongueurShape" type="CollisionShape2D" parent="MurHautBody"]
 shape = SubResource("RectangleShape2D_4hjbm")
 debug_color = Color(0.75339, 0, 0.00924313, 1)
+
+[node name="Balle" parent="." instance=ExtResource("3_4hjbm")]
+
+[node name="Camera2D" type="Camera2D" parent="."]

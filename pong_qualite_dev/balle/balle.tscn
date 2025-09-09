@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dy4a18ynh8smu"]
+
+[ext_resource type="Script" uid="uid://cl80w2t7m43af" path="res://balle/BalleRigidBody.cs" id="1_50dfo"]
+[ext_resource type="Texture2D" uid="uid://cs4pe1gpkbc8y" path="res://assets/sprites/balle.png" id="2_jdfn4"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8l2cd"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t25cb"]
+radius = 17.0294
+
+[node name="Balle" type="Node2D"]
+
+[node name="BalleRigidBody" type="RigidBody2D" parent="."]
+mass = 0.001
+physics_material_override = SubResource("PhysicsMaterial_8l2cd")
+gravity_scale = 0.0
+linear_damp_mode = 1
+angular_damp_mode = 1
+script = ExtResource("1_50dfo")
+Speed = 1500.0
+
+[node name="BalleSprite" type="Sprite2D" parent="BalleRigidBody"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_jdfn4")
+
+[node name="BalleCollisionShape2D" type="CollisionShape2D" parent="BalleRigidBody"]
+shape = SubResource("CircleShape2D_t25cb")
