@@ -1,3 +1,17 @@
-[gd_scene format=3 uid="uid://cifng3l4rck40"]
+[gd_scene load_steps=3 format=3 uid="uid://cifng3l4rck40"]
+
+[ext_resource type="Texture2D" uid="uid://bi80vomkxsjop" path="res://assets/sprites/joueur1.png" id="1_ipili"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fn5j8"]
+size = Vector2(24, 64)
 
 [node name="Joueur1" type="Node2D"]
+
+[node name="BodyJoueur1" type="RigidBody2D" parent="."]
+
+[node name="SpriteJoueur1" type="Sprite2D" parent="BodyJoueur1"]
+texture = ExtResource("1_ipili")
+
+[node name="CollissionJoueur1" type="CollisionShape2D" parent="BodyJoueur1"]
+shape = SubResource("RectangleShape2D_fn5j8")
+debug_color = Color(0.984314, 0, 0.352941, 0.380392)
