@@ -3,6 +3,14 @@ using System;
 
 public partial class MainMenu : MarginContainer
 {
+	public override void _UnhandledInput(InputEvent @event)
+	{
+		if (@event.IsActionPressed("ui_cancel")) // "ui_cancel" = touche Échap par défaut
+		{
+			GetTree().Quit();
+		}
+	}
+	
 	//Bouton jouer
 	private void OnPlayPressed(){
 		GetTree().ChangeSceneToFile("res://map/map.tscn");
