@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://bcmn63y5sj3s6"]
+[gd_scene load_steps=9 format=3 uid="uid://bcmn63y5sj3s6"]
 
+[ext_resource type="Script" uid="uid://dwyt3ykf4stbj" path="res://mainMenu/MainMenu.cs" id="1_6ay73"]
 [ext_resource type="FontFile" uid="uid://chqbws2sevdlh" path="res://assets/mainMenu/PixelGamer-Regular.otf" id="1_kpht7"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kpht7"]
@@ -20,6 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6ay73")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 2
@@ -86,7 +88,7 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_1dglg")
 text = "Quitter"
 alignment = 0
 
-[node name="Leave2" type="Button" parent="mainMenu/HBoxContainer/VBoxContainer"]
+[node name="Credits" type="Button" parent="mainMenu/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_kpht7")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kpht7")
@@ -104,3 +106,8 @@ size_flags_horizontal = 3
 
 [node name="Illustration" type="TextureRect" parent="mainMenu/HBoxContainer/CenterContainer"]
 layout_mode = 2
+
+[connection signal="pressed" from="mainMenu/HBoxContainer/VBoxContainer/MenuOptions/Play" to="." method="OnPlayPressed"]
+[connection signal="pressed" from="mainMenu/HBoxContainer/VBoxContainer/MenuOptions/Leaderboard" to="." method="OnLeaderboardPressed"]
+[connection signal="pressed" from="mainMenu/HBoxContainer/VBoxContainer/MenuOptions/Leave" to="." method="OnLeavePressed"]
+[connection signal="pressed" from="mainMenu/HBoxContainer/VBoxContainer/Credits" to="." method="OnCreditsPressed"]

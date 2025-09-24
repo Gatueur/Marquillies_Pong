@@ -1,0 +1,25 @@
+using Godot;
+using System;
+
+public partial class MainMenu : MarginContainer
+{
+	//Bouton jouer
+	private void OnPlayPressed(){
+		GetTree().ChangeSceneToFile("res://map/map.tscn");
+	}
+	
+	//Bouton leaderboard
+	private void OnLeaderboardPressed(){
+		GetTree().ChangeSceneToFile("res://mainMenu/leaderboard.tscn");
+	}
+	
+	//Bouton quitter
+	private void OnLeavePressed(){
+		GetTree().Quit();
+	}
+	
+	//Bouton credits
+	private void OnCreditsPressed(){
+		GetTree().ChangeSceneToFile("res://mainMenu/credits.tscn");
+	}
+}
