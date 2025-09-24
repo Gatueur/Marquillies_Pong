@@ -1,6 +1,10 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pong_qualite_dev", "pong_qualite_dev.csproj", "{2BF6403C-0610-42AB-BF37-A216EF0E005F}"
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pong_qualite_dev", "pong_qualite_dev.csproj", "{086738D5-0B1F-4C47-88A9-1AAA91668DCC}"
+>>>>>>> d78b6668240359a95d54692b7050aec6d23e360d
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,11 +13,20 @@ Global
 	ExportRelease|Any CPU = ExportRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<< HEAD
 		{2BF6403C-0610-42AB-BF37-A216EF0E005F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2BF6403C-0610-42AB-BF37-A216EF0E005F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BF6403C-0610-42AB-BF37-A216EF0E005F}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
 		{2BF6403C-0610-42AB-BF37-A216EF0E005F}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
 		{2BF6403C-0610-42AB-BF37-A216EF0E005F}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
 		{2BF6403C-0610-42AB-BF37-A216EF0E005F}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+=======
+		{086738D5-0B1F-4C47-88A9-1AAA91668DCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{086738D5-0B1F-4C47-88A9-1AAA91668DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{086738D5-0B1F-4C47-88A9-1AAA91668DCC}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{086738D5-0B1F-4C47-88A9-1AAA91668DCC}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{086738D5-0B1F-4C47-88A9-1AAA91668DCC}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{086738D5-0B1F-4C47-88A9-1AAA91668DCC}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+>>>>>>> d78b6668240359a95d54692b7050aec6d23e360d
 	EndGlobalSection
 EndGlobal

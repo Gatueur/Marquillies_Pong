@@ -14,6 +14,7 @@ config/name="pong_qualite_dev"
 run/main_scene="uid://bcmn63y5sj3s6"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+<<<<<<<HEADrun/main_scene="uid://bcmn63y5sj3s6"
 
 [dotnet]
 
