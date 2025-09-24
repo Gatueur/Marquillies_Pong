@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=4 uid="uid://cif2dfk3c00bl"]
+[gd_scene load_steps=11 format=4 uid="uid://cif2dfk3c00bl"]
 
 [ext_resource type="Texture2D" uid="uid://b8c3r8levm07a" path="res://assets/map/map_background.png" id="1_a0dt8"]
 [ext_resource type="Texture2D" uid="uid://ded7em5rtf1br" path="res://assets/map/map_white_band.png" id="2_4hjbm"]
 [ext_resource type="PackedScene" uid="uid://dy4a18ynh8smu" path="res://balle/balle.tscn" id="3_4hjbm"]
+[ext_resource type="PackedScene" uid="uid://cifng3l4rck40" path="res://joueurs/joueur1.tscn" id="4_kffv2"]
+[ext_resource type="PackedScene" uid="uid://dokbcbb8ntaua" path="res://joueurs/joueur2.tscn" id="5_7lyie"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lgq1i"]
 texture = ExtResource("1_a0dt8")
@@ -63,3 +65,9 @@ position = Vector2(0, 8)
 zoom = Vector2(1, 1.04)
 
 [node name="Balle" parent="." instance=ExtResource("3_4hjbm")]
+
+[node name="Joueur1" parent="." instance=ExtResource("4_kffv2")]
+position = Vector2(-540, 0)
+
+[node name="Joueur2" parent="." instance=ExtResource("5_7lyie")]
+position = Vector2(540, 0)
