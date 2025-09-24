@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dokbcbb8ntaua"]
+[gd_scene load_steps=4 format=3 uid="uid://dokbcbb8ntaua"]
 
+[ext_resource type="Script" uid="uid://6d0clx8wvc1i" path="res://joueurs/BodyJoueur2.cs" id="1_jmr3v"]
 [ext_resource type="Texture2D" uid="uid://w6mnmm7h1whj" path="res://assets/sprites/joueur2.png" id="1_saero"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jmr3v"]
@@ -7,7 +8,9 @@ size = Vector2(24, 64)
 
 [node name="Joueur2" type="Node2D"]
 
-[node name="BodyJoueur2" type="RigidBody2D" parent="."]
+[node name="BodyJoueur2" type="CharacterBody2D" parent="."]
+motion_mode = 1
+script = ExtResource("1_jmr3v")
 
 [node name="SpriteJoueur2" type="Sprite2D" parent="BodyJoueur2"]
 texture = ExtResource("1_saero")
