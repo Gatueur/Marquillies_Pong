@@ -13,6 +13,7 @@ public partial class BalleRigidBody : RigidBody2D
 			(float)GD.RandRange(-1.0, 1.0),
 			(float)GD.RandRange(-0.5, 0.5)
 		).Normalized();
+		// Défini la direction de la balle au début selon un vecteur random
 
 		LinearVelocity = dir * Speed;
 	}
@@ -26,6 +27,7 @@ public partial class BalleRigidBody : RigidBody2D
 			(float)GD.RandRange(-1.0, 1.0),
 			(float)GD.RandRange(-0.5, 0.5)
 		).Normalized();
+		// Défini la direction de la balle au reset
 
 		LinearVelocity = dir * Speed;
 	}
