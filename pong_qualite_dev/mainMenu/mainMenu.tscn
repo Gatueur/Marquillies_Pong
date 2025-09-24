@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bcmn63y5sj3s6"]
+[gd_scene load_steps=10 format=3 uid="uid://bcmn63y5sj3s6"]
 
 [ext_resource type="Script" uid="uid://dwyt3ykf4stbj" path="res://mainMenu/MainMenu.cs" id="1_6ay73"]
 [ext_resource type="FontFile" uid="uid://chqbws2sevdlh" path="res://assets/mainMenu/PixelGamer-Regular.otf" id="1_kpht7"]
+[ext_resource type="Texture2D" uid="uid://bhq52w0hwio4r" path="res://assets/mainMenu/logo.png" id="3_b4frg"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kpht7"]
 
@@ -39,10 +40,6 @@ layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="mainMenu/HBoxContainer"]
 layout_mode = 2
-
-[node name="Title" type="Label" parent="mainMenu/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-text = "Pong"
 
 [node name="MenuOptions" type="VBoxContainer" parent="mainMenu/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -100,12 +97,13 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_1dglg")
 text = "Credits"
 alignment = 0
 
-[node name="CenterContainer" type="CenterContainer" parent="mainMenu/HBoxContainer"]
+[node name="Illustration" type="TextureRect" parent="mainMenu/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-
-[node name="Illustration" type="TextureRect" parent="mainMenu/HBoxContainer/CenterContainer"]
-layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("3_b4frg")
+expand_mode = 5
+stretch_mode = 5
 
 [connection signal="pressed" from="mainMenu/HBoxContainer/VBoxContainer/MenuOptions/Play" to="." method="OnPlayPressed"]
 [connection signal="pressed" from="mainMenu/HBoxContainer/VBoxContainer/MenuOptions/Leaderboard" to="." method="OnLeaderboardPressed"]
