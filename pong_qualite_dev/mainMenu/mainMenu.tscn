@@ -1,0 +1,111 @@
+[gd_scene load_steps=10 format=3 uid="uid://bcmn63y5sj3s6"]
+
+[ext_resource type="Script" uid="uid://dwyt3ykf4stbj" path="res://mainMenu/MainMenu.cs" id="1_6ay73"]
+[ext_resource type="FontFile" uid="uid://chqbws2sevdlh" path="res://assets/mainMenu/PixelGamer-Regular.otf" id="1_kpht7"]
+[ext_resource type="Texture2D" uid="uid://bhq52w0hwio4r" path="res://assets/mainMenu/logo.png" id="3_b4frg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kpht7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6ay73"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b4frg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yobga"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0o04g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1dglg"]
+
+[node name="MarginContainer" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6ay73")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="mainMenu" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 80
+
+[node name="HBoxContainer" type="HBoxContainer" parent="mainMenu"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="mainMenu/HBoxContainer"]
+layout_mode = 2
+
+[node name="MenuOptions" type="VBoxContainer" parent="mainMenu/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_constants/separation = 30
+
+[node name="Play" type="Button" parent="mainMenu/HBoxContainer/VBoxContainer/MenuOptions"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_kpht7")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kpht7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_6ay73")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_b4frg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yobga")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_0o04g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1dglg")
+text = "Jouer"
+alignment = 0
+
+[node name="Leaderboard" type="Button" parent="mainMenu/HBoxContainer/VBoxContainer/MenuOptions"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_kpht7")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kpht7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_6ay73")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_b4frg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yobga")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_0o04g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1dglg")
+text = "Tableau des scores"
+alignment = 0
+
+[node name="Leave" type="Button" parent="mainMenu/HBoxContainer/VBoxContainer/MenuOptions"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_kpht7")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kpht7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_6ay73")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_b4frg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yobga")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_0o04g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1dglg")
+text = "Quitter"
+alignment = 0
+
+[node name="Credits" type="Button" parent="mainMenu/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_kpht7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kpht7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_6ay73")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_b4frg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yobga")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_0o04g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1dglg")
+text = "Credits"
+alignment = 0
+
+[node name="Illustration" type="TextureRect" parent="mainMenu/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_b4frg")
+expand_mode = 5
+stretch_mode = 5
+
+[connection signal="pressed" from="mainMenu/HBoxContainer/VBoxContainer/MenuOptions/Play" to="." method="OnPlayPressed"]
+[connection signal="pressed" from="mainMenu/HBoxContainer/VBoxContainer/MenuOptions/Leaderboard" to="." method="OnLeaderboardPressed"]
+[connection signal="pressed" from="mainMenu/HBoxContainer/VBoxContainer/MenuOptions/Leave" to="." method="OnLeavePressed"]
+[connection signal="pressed" from="mainMenu/HBoxContainer/VBoxContainer/Credits" to="." method="OnCreditsPressed"]
