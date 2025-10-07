@@ -18,6 +18,20 @@ public partial class BalleRigidBody : RigidBody2D
 		LinearVelocity = dir * Speed;
 	}
 
+	public override void _PhysicsProcess(double delta)
+	{
+		if (LinearVelocity.Length() != 0)
+		{
+			LinearVelocity = LinearVelocity.Normalized() * Speed;
+		}
+	}
+	
+	private void OnBodyEntered(Node body)
+	{
+		// Exemple : +5% de vitesse à chaque collision
+		Speed *= 1.05f;
+	}
+
 	//Faudra l'appeler quand on aura tout au même endroit dcp
 	public void ResetBall()
 	{
