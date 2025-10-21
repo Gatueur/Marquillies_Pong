@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://carrs1hcpck70"]
+[gd_scene load_steps=3 format=3 uid="uid://carrs1hcpck70"]
 
-[ext_resource type="FontFile" uid="uid://dvf8l3cuu5nn5" path="res://assets/mainMenu/GamePocket-Regular.ttf" id="1_bb051"]
+[ext_resource type="Script" uid="uid://h8itu6euuipq" path="res://mainMenu/Leaderboard.cs" id="1_oaijo"]
+[ext_resource type="FontFile" uid="uid://chqbws2sevdlh" path="res://assets/mainMenu/PixelGamer-Regular.otf" id="2_oaijo"]
 
 [node name="MarginContainer" type="MarginContainer"]
 anchors_preset = 15
@@ -8,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_oaijo")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 2
@@ -20,15 +22,23 @@ theme_override_constants/margin_top = 80
 theme_override_constants/margin_right = 120
 theme_override_constants/margin_bottom = 80
 
-[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_oaijo")
+text = "Échap pour retourner"
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CenterContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_bb051")
+theme_override_fonts/font = ExtResource("2_oaijo")
 theme_override_font_sizes/font_size = 36
 text = "TABLEAU DES SCORES"

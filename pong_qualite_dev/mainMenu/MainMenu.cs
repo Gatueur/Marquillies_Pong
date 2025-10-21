@@ -1,13 +1,17 @@
 using Godot;
 using System;
 
+// Script de la scène MainMenu
 public partial class MainMenu : MarginContainer
 {
+	/*
+	*	Fonction qui ferme le jeu à l'appui de la touche "ui_cancel"
+	*/
 	public override void _UnhandledInput(InputEvent @event)
 	{
 		if (@event.IsActionPressed("ui_cancel")) // "ui_cancel" = touche Échap par défaut
 		{
-			GetTree().Quit();
+			GetTree().Quit(); // Fermer le jeu
 		}
 	}
 	
