@@ -56,19 +56,22 @@ public partial class BalleRigidBody : RigidBody2D
 	}
 
 	public void ResetBall(bool toRight)
+{
+	// Position au centre exact du viewport (X et Y)
+	GlobalPosition = GetViewportRect().Size / 2;
+
+	// Stoppe la balle temporairement
+	LinearVelocity = Vector2.Zero;
+
+	// Relance après 0,5 seconde
+	GetTree().CreateTimer(0.5).Timeout += () =>
 	{
-		// Replace la balle au centre
-		GlobalPosition = GetViewportRect().Size / 2;
+		// Direction aléatoire : X vers droite ou gauche selon toRight, Y aléatoire
+		Vector2 dir = new Vector2(toRight ? 1 : -1, (float)GD.RandRange(-0.3f, 0.3f)).Normalized();
 
-		// Petite pause avant de relancer (optionnel)
-		GetTree().CreateTimer(0.5).Timeout += () =>
-		{
-			// Direction selon le joueur qui vient d’encaisser
-			Vector2 dir = (toRight ? Vector2.Right : Vector2.Left) +
-						  new Vector2(0, (float)GD.RandRange(-0.3, 0.3f));
-			dir = dir.Normalized();
+		// Applique la vitesse
+		LinearVelocity = dir * Speed;
+	};
+}
 
-			LinearVelocity = dir * Speed;
-		};
-	}
 }
