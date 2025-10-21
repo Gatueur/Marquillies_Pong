@@ -17,7 +17,7 @@ public partial class MainMenu : MarginContainer
 	
 	//Bouton jouer
 	private void OnPlayPressed(){
-		GetTree().ChangeSceneToFile("res://map/map.tscn");
+		GetTree().ChangeSceneToFile("res://jeu.tscn");
 	}
 	
 	//Bouton leaderboard
