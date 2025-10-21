@@ -75,6 +75,7 @@ public partial class BalleRigidBody : RigidBody2D
 			// Direction aléatoire : X vers droite ou gauche selon toRight, Y aléatoire
 			Vector2 dir = new Vector2(toRight ? 1 : -1, (float)GD.RandRange(-0.3f, 0.3f)).Normalized();
 
+			Speed = 400f;
 			// Applique la vitesse
 			LinearVelocity = dir * Speed;
 		};
