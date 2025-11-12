@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\gatue\\Documents\\Marquillies_Pong\\pong_qualite_dev\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2BF6403C-0610-42AB-BF37-A216EF0E005F}|pong_qualite_dev.csproj|c:\\users\\gatue\\documents\\marquillies_pong\\pong_qualite_dev\\test\\tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BF6403C-0610-42AB-BF37-A216EF0E005F}|pong_qualite_dev.csproj|solutionrelative:test\\tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BF6403C-0610-42AB-BF37-A216EF0E005F}|pong_qualite_dev.csproj|c:\\users\\gatue\\documents\\marquillies_pong\\pong_qualite_dev\\balle\\ballerigidbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BF6403C-0610-42AB-BF37-A216EF0E005F}|pong_qualite_dev.csproj|solutionrelative:balle\\ballerigidbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,6 +51,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BalleRigidBody.cs",
+              "DocumentMoniker": "C:\\Users\\gatue\\Documents\\Marquillies_Pong\\pong_qualite_dev\\balle\\BalleRigidBody.cs",
+              "RelativeDocumentMoniker": "balle\\BalleRigidBody.cs",
+              "ToolTip": "C:\\Users\\gatue\\Documents\\Marquillies_Pong\\pong_qualite_dev\\balle\\BalleRigidBody.cs",
+              "RelativeToolTip": "balle\\BalleRigidBody.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T18:26:08.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "tests.cs",
+              "DocumentMoniker": "C:\\Users\\gatue\\Documents\\Marquillies_Pong\\pong_qualite_dev\\test\\tests.cs",
+              "RelativeDocumentMoniker": "test\\tests.cs",
+              "ToolTip": "C:\\Users\\gatue\\Documents\\Marquillies_Pong\\pong_qualite_dev\\test\\tests.cs",
+              "RelativeToolTip": "test\\tests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T18:23:29.006Z",
+              "EditorCaption": ""
             }
           ]
         }

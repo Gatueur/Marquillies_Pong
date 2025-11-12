@@ -22,7 +22,7 @@ public partial class BalleRigidBody : RigidBody2D
 		AddChild(timer);
 		}
 		
-	private void LaunchBall()
+	public void LaunchBall()
 	{
 		// Crée un vecteur aléatoire pour lancer la balle à l'appel de la fonction (x et y)
 		Vector2 dir = new Vector2(
