@@ -40,6 +40,10 @@ public partial class scoreDisplay : Node2D
 
 		if (Digit2 != null)
 			Digit2.Texture = numberTextures[ones];
+		
+		if (Score == 10){
+			GetTree().ChangeSceneToFile("res://map//finPartie.tscn");
+		}
 	}
 
 	public void ResetScore()
