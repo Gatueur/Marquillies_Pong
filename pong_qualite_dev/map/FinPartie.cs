@@ -1,8 +1,7 @@
 using Godot;
 using System;
 
-// Script de la scène Leaderboard
-public partial class Leaderboard : MarginContainer
+public partial class FinPartie : MarginContainer
 {
 	/*
 	*	Fonction retour en arrière à l'appui de la touche "ui_cancel"

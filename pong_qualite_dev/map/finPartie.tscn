@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://chpxpameei30d"]
+[gd_scene load_steps=3 format=3 uid="uid://chpxpameei30d"]
 
+[ext_resource type="Script" uid="uid://cx8vbptqbhb5r" path="res://map/FinPartie.cs" id="1_64b85"]
 [ext_resource type="FontFile" uid="uid://chqbws2sevdlh" path="res://assets/mainMenu/PixelGamer-Regular.otf" id="1_j64ok"]
 
 [node name="MarginContainer" type="MarginContainer"]
@@ -8,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_64b85")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 2
