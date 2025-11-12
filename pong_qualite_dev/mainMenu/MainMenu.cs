@@ -20,11 +20,6 @@ public partial class MainMenu : MarginContainer
 		GetTree().ChangeSceneToFile("res://map/map.tscn");
 	}
 	
-	//Bouton leaderboard
-	private void OnLeaderboardPressed(){
-		GetTree().ChangeSceneToFile("res://mainMenu/leaderboard.tscn");
-	}
-	
 	//Bouton quitter
 	private void OnLeavePressed(){
 		GetTree().Quit();

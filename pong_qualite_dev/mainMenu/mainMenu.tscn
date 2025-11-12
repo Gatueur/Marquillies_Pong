@@ -59,19 +59,6 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_1dglg")
 text = "Jouer"
 alignment = 0
 
-[node name="Leaderboard" type="Button" parent="mainMenu/HBoxContainer/VBoxContainer/MenuOptions"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_kpht7")
-theme_override_font_sizes/font_size = 24
-theme_override_styles/focus = SubResource("StyleBoxEmpty_kpht7")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_6ay73")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_b4frg")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_yobga")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_0o04g")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_1dglg")
-text = "Tableau des scores"
-alignment = 0
-
 [node name="Leave" type="Button" parent="mainMenu/HBoxContainer/VBoxContainer/MenuOptions"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_kpht7")
@@ -106,6 +93,5 @@ expand_mode = 5
 stretch_mode = 5
 
 [connection signal="pressed" from="mainMenu/HBoxContainer/VBoxContainer/MenuOptions/Play" to="." method="OnPlayPressed"]
-[connection signal="pressed" from="mainMenu/HBoxContainer/VBoxContainer/MenuOptions/Leaderboard" to="." method="OnLeaderboardPressed"]
 [connection signal="pressed" from="mainMenu/HBoxContainer/VBoxContainer/MenuOptions/Leave" to="." method="OnLeavePressed"]
 [connection signal="pressed" from="mainMenu/HBoxContainer/VBoxContainer/Credits" to="." method="OnCreditsPressed"]
