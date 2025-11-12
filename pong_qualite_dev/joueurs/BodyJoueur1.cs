@@ -22,7 +22,7 @@ public partial class BodyJoueur1 : CharacterBody2D
 		// Sécurité : repositionne X au cas où
 		GlobalPosition = new Vector2(FixedX, GlobalPosition.Y);
 	}
-	// Valeur fixe pour la position X (tu peux l’assigner dans _Ready)
+	// Valeur fixe pour la position X
 	private float FixedX;
 
 	public override void _Ready()

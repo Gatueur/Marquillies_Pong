@@ -20,7 +20,7 @@ public partial class scoreDisplay : Node2D
 			var tex = GD.Load<Texture2D>($"res://assets/sprites/numbers/{i}.png");
 			numberTextures[i] = tex;
 		}
-
+		// Mise à jour de l'affichage du score
 		UpdateDisplay();
 	}
 
