@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://doh5f8r07yql6"]
+
+[ext_resource type="Script" uid="uid://cswxcpsjx0ecq" path="res://Jeu.cs" id="1_0yqk5"]
+[ext_resource type="PackedScene" uid="uid://cif2dfk3c00bl" path="res://map/map.tscn" id="1_hp17q"]
+[ext_resource type="PackedScene" uid="uid://cifng3l4rck40" path="res://joueurs/joueur1.tscn" id="2_s1xry"]
+[ext_resource type="PackedScene" uid="uid://dokbcbb8ntaua" path="res://joueurs/joueur2.tscn" id="3_0yqk5"]
+[ext_resource type="PackedScene" uid="uid://dy4a18ynh8smu" path="res://balle/balle.tscn" id="4_aw23n"]
+[ext_resource type="Script" uid="uid://b81afscesa6vb" path="res://scoreDisplay.cs" id="5_s1xry"]
+
+[node name="Jeu" type="Node2D"]
+script = ExtResource("1_0yqk5")
+
+[node name="Map" parent="." instance=ExtResource("1_hp17q")]
+
+[node name="Joueur1" parent="." instance=ExtResource("2_s1xry")]
+position = Vector2(-543, 0)
+
+[node name="Joueur2" parent="." instance=ExtResource("3_0yqk5")]
+position = Vector2(543, 0)
+
+[node name="Balle" parent="." instance=ExtResource("4_aw23n")]
+
+[node name="UI" type="Node2D" parent="."]
+
+[node name="Left" type="Node2D" parent="UI" node_paths=PackedStringArray("Digit1", "Digit2")]
+position = Vector2(-63, -267)
+script = ExtResource("5_s1xry")
+Digit1 = NodePath("Digit1")
+Digit2 = NodePath("Digit2")
+
+[node name="Digit1" type="Sprite2D" parent="UI/Left"]
+offset = Vector2(-20, 0)
+
+[node name="Digit2" type="Sprite2D" parent="UI/Left"]
+offset = Vector2(20, 0)
+
+[node name="Right" type="Node2D" parent="UI" node_paths=PackedStringArray("Digit1", "Digit2")]
+position = Vector2(64, -267)
+script = ExtResource("5_s1xry")
+Digit1 = NodePath("Digit1")
+Digit2 = NodePath("Digit2")
+
+[node name="Digit1" type="Sprite2D" parent="UI/Right"]
+offset = Vector2(-20, 0)
+
+[node name="Digit2" type="Sprite2D" parent="UI/Right"]
+offset = Vector2(20, 0)
