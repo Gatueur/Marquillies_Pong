@@ -12,22 +12,23 @@ public partial class Jeu : Node2D
 		var butGauche = map.GetNode<Area2D>("ButGauche");
 		var butDroit = map.GetNode<Area2D>("ButDroit");
 
-		// Connecte le signal body_entered de chaque but
+		// Connecte le signal body_entered de chaque but pour détecter les collisiosn entrantes
 		butGauche.BodyEntered += (Node2D body) =>
 		{
 			if (body is BalleRigidBody balle)
 			{
-				GD.Print("But gauche !");
+				// Ajout d'un point avant le reset de la balle
 				GetNode<scoreDisplay>("UI/Right").AddPoint();
 				balle.ResetBall(toRight: true);
 			}
 		};
-
+		
+		// Connecte le signal body_entered de chaque but pour détecter les collisiosn entrantes
 		butDroit.BodyEntered += (Node2D body) =>
 		{
 			if (body is BalleRigidBody balle)
 			{
-				GD.Print("But droit !");
+				// Ajout d'un point avant le reset de la balle
 				GetNode<scoreDisplay>("UI/Left").AddPoint();
 				balle.ResetBall(toRight: false);
 			}
